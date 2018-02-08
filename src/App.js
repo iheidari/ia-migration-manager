@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <div>
         <Menu />
-        <main role="main" class="container">
-          <div class="starter-template">
+        <main role="main" className="container">
+          <div className="starter-template">
            <ChangeSetManager />
           </div>
         </main>

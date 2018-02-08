@@ -20,10 +20,9 @@ export default class ChangeSetInput extends Component {
         return (
             <div>
                 <FormGroup>
-                    <ControlLabel>Working example with validation</ControlLabel>
+                    <ControlLabel>Enter list of change-sets:</ControlLabel>
                     <FormControl
                         componentClass="textarea" 
-                        placeholder="textarea"
                         value={this.state.value}
                         placeholder="Enter text"
                         onChange={this.handleChange}
