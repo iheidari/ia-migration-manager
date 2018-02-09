@@ -6,6 +6,7 @@ export default class ChangeSetInput extends Component {
         super(props, context);
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
 
         this.state = {
             value: ''
@@ -14,6 +15,9 @@ export default class ChangeSetInput extends Component {
 
     handleChange(e) {
         this.setState({ value: e.target.value });
+    }
+    handleSubmit(){
+        this.props.submitClick(this.state.value);
     }
 
     render() {
@@ -30,7 +34,7 @@ export default class ChangeSetInput extends Component {
                         rows="20"
                     />
                 </FormGroup>
-                <Button type="submit" onClick={this.props.submitClick}>Submit</Button>
+                <Button type="submit" onClick={this.handleSubmit}>Submit</Button>
             </div>
         )
     }
