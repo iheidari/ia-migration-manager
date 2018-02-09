@@ -10,8 +10,9 @@ export default class ChangeSetManager extends Component {
             mode: "input"
         };
     }
-    submit = () => {
-        //this.setState({ mode: "list" });
+    submit = (value) => {
+        this.setState({ mode: "list" });
+        
         const tt = Get('https://jsonplaceholder.typicode.com/posts/10');
         //const tt = GetAll(['https://jsonplaceholder.typicode.com/posts/1','https://jsonplaceholder.typicode.com/posts/2']);
         tt.then((resp)=>{

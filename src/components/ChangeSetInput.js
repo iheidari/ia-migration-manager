@@ -16,6 +16,7 @@ export default class ChangeSetInput extends Component {
     handleChange(e) {
         this.setState({ value: e.target.value });
     }
+    
     handleSubmit(){
         this.props.submitClick(this.state.value);
     }
