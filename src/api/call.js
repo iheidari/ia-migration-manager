@@ -2,17 +2,6 @@ import axios from 'axios';
 
 async function Get(url) {
     return axios.get(url);
-    const t =  Promise.resolve(axios.get(url));
-    // .then(function (response) {
-    //     console.log(response);
-    //     return response;
-    // })
-    // .catch(function (error) {
-    //     console.log(error);
-    //     return undefined;
-    // });
-    console.log(t);
-    return await(t);
 }
 
 export { Get };
