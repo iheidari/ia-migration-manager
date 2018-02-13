@@ -1,7 +1,9 @@
+/* eslint-disable */
 //http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184?api-version=1.0
 export const GetChangesetById = (id) => {
     //return JSON.parse(`{"result":true, "count":42}`);
-    return JSON.parse(`{"changesetId": 65184,
+    return new Promise((resp) => {
+        resp(JSON.parse(`{"changesetId": 65184,
         "url": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184",
         "author": {
             "id": "d3760f5c-5a35-4ef5-a1f3-37ca3da1c799",
@@ -39,66 +41,71 @@ export const GetChangesetById = (id) => {
                 "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/Identities/d3760f5c-5a35-4ef5-a1f3-37ca3da1c799"
             }
         }
-    }`);
+    }`));
+    }
+    );
 }
 
 //http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184?api-version=1.0&includeDetails=true
 export const GetChangesetDetailById = (id) => {
-    JSON.parse({
-        "checkinNotes": [{
-            "name": "Code Reviewer",
-            "value": ""
-        },
-        {
-            "name": "Performance Reviewer",
-            "value": ""
-        },
-        {
-            "name": "Security Reviewer",
-            "value": ""
-        }],
-        "policyOverride": {
-            "policyFailures": []
-        },
-        "changesetId": 65184,
-        "url": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184",
-        "author": {
-            "id": "d3760f5c-5a35-4ef5-a1f3-37ca3da1c799",
-            "displayName": "Heidari, Iman",
-            "uniqueName": "SLIC\IMH",
-            "url": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/Identities/d3760f5c-5a35-4ef5-a1f3-37ca3da1c799",
-            "imageUrl": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_api/_common/identityImage?id=d3760f5c-5a35-4ef5-a1f3-37ca3da1c799"
-        },
-        "checkedInBy": {
-            "id": "d3760f5c-5a35-4ef5-a1f3-37ca3da1c799",
-            "displayName": "Heidari, Iman",
-            "uniqueName": "SLIC\IMH",
-            "url": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/Identities/d3760f5c-5a35-4ef5-a1f3-37ca3da1c799",
-            "imageUrl": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_api/_common/identityImage?id=d3760f5c-5a35-4ef5-a1f3-37ca3da1c799"
-        },
-        "createdDate": "2018-02-06T19:26:20.17Z",
-        "comment": "47200 Sprint 180 Migration DP",
-        "_links": {
-            "self": {
-                "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184"
+    return new Promise((resp) => {
+        resp(JSON.parse({
+            "checkinNotes": [{
+                "name": "Code Reviewer",
+                "value": ""
             },
-            "changes": {
-                "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184/changes"
+            {
+                "name": "Performance Reviewer",
+                "value": ""
             },
-            "workItems": {
-                "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184/workItems"
+            {
+                "name": "Security Reviewer",
+                "value": ""
+            }],
+            "policyOverride": {
+                "policyFailures": []
             },
-            "web": {
-                "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_versionControl/changeset/65184"
-            },
+            "changesetId": 65184,
+            "url": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184",
             "author": {
-                "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/Identities/d3760f5c-5a35-4ef5-a1f3-37ca3da1c799"
+                "id": "d3760f5c-5a35-4ef5-a1f3-37ca3da1c799",
+                "displayName": "Heidari, Iman",
+                "uniqueName": "SLIC\IMH",
+                "url": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/Identities/d3760f5c-5a35-4ef5-a1f3-37ca3da1c799",
+                "imageUrl": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_api/_common/identityImage?id=d3760f5c-5a35-4ef5-a1f3-37ca3da1c799"
             },
             "checkedInBy": {
-                "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/Identities/d3760f5c-5a35-4ef5-a1f3-37ca3da1c799"
+                "id": "d3760f5c-5a35-4ef5-a1f3-37ca3da1c799",
+                "displayName": "Heidari, Iman",
+                "uniqueName": "SLIC\IMH",
+                "url": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/Identities/d3760f5c-5a35-4ef5-a1f3-37ca3da1c799",
+                "imageUrl": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_api/_common/identityImage?id=d3760f5c-5a35-4ef5-a1f3-37ca3da1c799"
+            },
+            "createdDate": "2018-02-06T19:26:20.17Z",
+            "comment": "47200 Sprint 180 Migration DP",
+            "_links": {
+                "self": {
+                    "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184"
+                },
+                "changes": {
+                    "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184/changes"
+                },
+                "workItems": {
+                    "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184/workItems"
+                },
+                "web": {
+                    "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_versionControl/changeset/65184"
+                },
+                "author": {
+                    "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/Identities/d3760f5c-5a35-4ef5-a1f3-37ca3da1c799"
+                },
+                "checkedInBy": {
+                    "href": "http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/Identities/d3760f5c-5a35-4ef5-a1f3-37ca3da1c799"
+                }
             }
-        }
-    });
+        }))
+    }
+    );
 }
 
 //http://cv.websct.ia.iafg.net:8080/tfs/SOPCV_SNW/_apis/tfvc/changesets/65184?includeWorkItems=true&api-version=1.0&includeDetails=true

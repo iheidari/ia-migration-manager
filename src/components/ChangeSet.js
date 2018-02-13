@@ -1,11 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react';
+import Author from './Author';
 
-export default class ChangeSet extends Component {
-  render() {
-    return (
-      <div className="row border">
-        Hello
+const ChangeSet = (props) => {
+  return (
+    <div className="row">
+      <div className="col-lg-1">
+        <a href={props.url || "#"}>{props.id}</a>
       </div>
-    )
-  }
-}
+      <div className="col-lg-2">
+        <Author {...props.author} />
+      </div>
+      <div className="col-lg-3">
+        <Author {...props.comment} />
+      </div>
+
+    </div>
+  )
+};
+
+export default ChangeSet;
