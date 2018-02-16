@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import * as Api from '../api/mock';
+//import * as Api from '../../api/mock';
+import * as Api from '../../api/utility';
 import ChangeSet from './ChangeSet';
 import ChangeSetHeader from './ChangeSetHeader';
 
@@ -11,21 +12,15 @@ export default class ChangeSetContainer extends Component {
         }
     }
 
-    callForData = (changeset) => {
-        Api.GetChangesetDetailById(changeset.id)
+    callForData = (changesetId) => {
+        Api.GetChangesetDetailById(changesetId)
             .then((resp) => {
                 this.setState({
                     url: resp.url,
                     author: resp.checkedInBy,
                     comment: resp.comment
-                });
-                return Api.GetChangesetWorkItemsById(changeset.id);
-            })
-            .then((resp) => {
-                console.log('second done');
-                console.log(resp);
-            }
-            );
+                });                
+            });
     }
 
     componentWillMount() {
@@ -35,11 +30,10 @@ export default class ChangeSetContainer extends Component {
 
     render() {
         const s = this.state;
-        //console.log(s);
         return (
             <div>
                 <ChangeSetHeader />
-                <ChangeSet {...s} />
+                <ChangeSet {...s} />                
             </div>
         )
     }

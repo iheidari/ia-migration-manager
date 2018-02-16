@@ -1,5 +1,6 @@
 import React from 'react';
-import Author from './Author';
+import Author from '../Author';
+import WorkItemContainer from '../workItem/WorkItemContainer';
 
 const ChangeSet = (props) => {
   return (
@@ -13,7 +14,9 @@ const ChangeSet = (props) => {
       <div className="col-lg-3">
         {props.comment}
       </div>
-
+      <div className="col-lg-6">
+        <WorkItemContainer changeSetId={props.id} />
+      </div>
     </div>
   )
 };
