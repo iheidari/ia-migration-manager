@@ -16,7 +16,7 @@ export default class WorkItemContainer extends Component {
     Api.GetChangesetWorkItemsById(workItemId).then(resp => {
       console.log(resp);
       this.setState({
-        workItems: resp.value
+        workItems: resp.value.filter((wi=> wi.workItemType==='Requirement' || wi.workItemType==='Task' || wi.workItemType==='Bug'))
       });
     });
   };
